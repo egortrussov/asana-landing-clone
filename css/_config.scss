@@ -1,0 +1,17 @@
+$primary-color: #796eff;
+$heading-color: #151b26;
+$par-color: #646f79;
+$coral: #fa6149;
+$slide-width: calc(100vw * .6);
+
+@mixin tablet { 
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop { 
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
