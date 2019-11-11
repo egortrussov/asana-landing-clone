@@ -22,6 +22,10 @@ body {
     overflow-x: hidden
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .outer-link {
     @include tablet {
         font-size: 1.3rem;
@@ -48,6 +52,10 @@ body {
     &.btn-primary {
         background: $primary-color;
         color: #fff;
+
+        &:hover {
+            background-color: darken($color: $primary-color, $amount: 2.5)
+        }
     }
 }
 
@@ -85,13 +93,21 @@ body {
 
 header {
     width: 100%;
-    height: 56px;
-    padding: 6px 12px;
+    height: 65px;
+    padding: 0 1rem;
     border-bottom: 1px solid lighten($par-color, 50);
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #fff;
+
+    &.fixed {
+        position: fixed;
+        transition: .2s;
+        z-index: 4000;
+        top: 0;
+        box-shadow: 0 10px 20px rgba($color: #000, $alpha: .1);
+    }
 
     .header-logo {
         width: 112px;
@@ -179,7 +195,7 @@ main {
             .video-btn {
                 height: 75px;
                 width: 75px;
-                box-shadow: 0 0 20px rgba($coral, .2);
+                box-shadow: 0 0 30px rgba($coral, 0.5);
                 background: $coral;
                 border-radius: 50%;
                 margin: auto;
@@ -459,8 +475,12 @@ main {
 }
 
 footer {
+    @include tablet {
+        padding: 6rem 7rem;
+    }
+
     background: #151b26;
-    padding: 6rem 7rem;
+    padding: 3rem 1rem;
     
     .footer-links {
         width: 100%;
@@ -482,12 +502,20 @@ footer {
                     display: block;
                 }
 
-                display: flex;
-                align-items: center;
+                //display: flex;
+                //align-items: center;
                 justify-content: center;
+                display: block;
+                position: relative;
+                height: 100px;
 
                 svg {
-                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    transform: translateX(-50%);
                 }
             }
 

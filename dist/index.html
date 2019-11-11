@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/0f22e9c5d4.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     
-    <header class="header">
+    <header class="header" id="header">
         <div class="header-logo">
             <a href="#">
                 <img src="img/logo.png" alt="">
@@ -37,16 +38,16 @@
 
         <div class="hero">
             <div class="hero-container">
-                <h4 class="hero-top">
+                <h4 data-aos="fade-left" class="hero-top">
                     Introducing timeline
                 </h4>
-                <h1 class="heading">
+                <h1 data-aos="fade-left" class="heading">
                     See how the pieces fit together
                 </h1>
-                <p class="subheading">
+                <p data-aos="fade-right" class="subheading">
                     Use Timeline to create project plans that help ypu stay on schadule - so you hit your deadlines
                 </p>
-                <div class="video-btn pulse">
+                <div data-aos="fade-wight" class="video-btn pulse">
                 </div>
             </div>
             <img src="img/hero-img-1.png" alt="" class="hero-img hero-img-1">
@@ -57,20 +58,22 @@
 
         <section id="map-project-plan">
             <div class="container">
-                <video class="videoAnimation" muted="" playsinline="" autoplay="" loop="" src="videos/video1.mp4"></video>
-                <h2 class="heading-2">Map out your project plan</h2>
-                <p class="subheading-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et cupiditate quas eum, voluptates, dicta odio aliquam iusto nesciunt quod dolores ipsa nobis impedit deleniti?
-                </p>
+                <video data-aos="fade-right" class="videoAnimation" muted="" playsinline="" autoplay="" loop="" src="videos/video1.mp4"></video>
+                <div data-aos="fade-left">
+                    <h2 class="heading-2">Map out your project plan</h2>
+                    <p class="subheading-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et cupiditate quas eum, voluptates, dicta odio aliquam iusto nesciunt quod dolores ipsa nobis impedit deleniti?
+                    </p>
+                </div>
             </div>
         </section>
 
         <section id="share-plan">
             <div class="container">
-                <div class="img">
+                <div data-aos="fade-right" class="img">
                     <img src="img/share-plan.png" alt="">
                 </div>
-                <div class="description">
+                <div data-aos="fade-left" class="description">
                     <h2 class="heading-2">Share your plan with everyone</h2>
                     <p class="subheading-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et cupiditate quas eum, voluptates, dicta odio aliquam iusto nesciunt quod dolores ipsa nobis impedit deleniti?
@@ -81,22 +84,19 @@
 
         <section id="modify-plan">
             <div class="container">
-                <div class="description">
+                <div data-aos="fade-right" class="description">
                     <h2 class="heading-2">Modify plans as work shanges</h2>
                     <p class="subheading-2">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et cupiditate quas eum, voluptates, dicta odio aliquam iusto nesciunt quod dolores ipsa nobis impedit deleniti?
                     </p>
                 </div>
-                <div class="img">
+                <div data-aos="fade-left" class="img">
                     <video class="videoAnimation" muted="" playsinline="" autoplay="" loop="" src="videos/video2.mp4"></video>
                 </div>
             </div>
         </section>
 
         <section id="carousel">
-            <div class="hint">
-                < Swipe >
-            </div>
             <div class="owl-carousel owl-theme">
                 <div class="item item1">
                     <img src="img/slide1.png" alt="">
@@ -173,10 +173,10 @@
 
         <section id="turn-speadsheets">
             <div class="container">
-                <div class="img">
+                <div data-aos="fade-right" class="img">
                     <video class="videoAnimation" muted="" playsinline="" autoplay="" loop="" src="videos/video2.mp4"></video>
                 </div>
-                <div class="description">
+                <div data-aos="fade-left" class="description">
                     <h2 class="heading-2">Turn spreadsheets into Timelines</h2>
                     <p class="subheading-2">
                             Projects were never meant to be planned in spreadsheets. <a class="outer-link" href="#">Import your CSV</a> file directly into Asana to create actionable Timelines that will help you hit your deadlines.
@@ -185,7 +185,7 @@
             </div>
         </section>
 
-        <section id="peek">
+        <section data-aos="fade-bottom" id="peek">
             <div class="container">
                 <div class="peek-img">
                     <img src="img/peek.png" alt="">
@@ -291,6 +291,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/owl.carousel.min.js" integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
 
 
 </body>

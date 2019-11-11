@@ -25,6 +25,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .outer-link {
   font-size: 1.1rem;
   color: #796eff;
@@ -54,6 +58,10 @@ body {
 .btn.btn-primary {
   background: #796eff;
   color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background-color: #6d61ff;
 }
 
 .heading {
@@ -94,8 +102,8 @@ body {
 
 header {
   width: 100%;
-  height: 56px;
-  padding: 6px 12px;
+  height: 65px;
+  padding: 0 1rem;
   border-bottom: 1px solid #eceef0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,6 +115,16 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fff;
+}
+
+header.fixed {
+  position: fixed;
+  -webkit-transition: .2s;
+  transition: .2s;
+  z-index: 4000;
+  top: 0;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 header .header-logo {
@@ -206,8 +224,8 @@ main .hero .hero-container .subheading {
 main .hero .hero-container .video-btn {
   height: 75px;
   width: 75px;
-  -webkit-box-shadow: 0 0 20px rgba(250, 97, 73, 0.2);
-          box-shadow: 0 0 20px rgba(250, 97, 73, 0.2);
+  -webkit-box-shadow: 0 0 30px rgba(250, 97, 73, 0.5);
+          box-shadow: 0 0 30px rgba(250, 97, 73, 0.5);
   background: #fa6149;
   border-radius: 50%;
   margin: auto;
@@ -541,7 +559,13 @@ main section#get-started .btn-primary {
 
 footer {
   background: #151b26;
-  padding: 6rem 7rem;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  footer {
+    padding: 6rem 7rem;
+  }
 }
 
 footer .footer-links {
@@ -568,15 +592,12 @@ footer .footer-links .box {
 }
 
 footer .footer-links .box.logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: block;
+  position: relative;
+  height: 100px;
 }
 
 @media (min-width: 768px) {
@@ -586,7 +607,13 @@ footer .footer-links .box.logo {
 }
 
 footer .footer-links .box.logo svg {
-  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 footer .footer-links .box .box-title {
