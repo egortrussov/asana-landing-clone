@@ -20,7 +20,18 @@ $(document).ready(function() {
         }
     });
 
-    $(".item").on("click", function() {
-        $(".hint").css("display", "none");
+    let isMenuShown = false;
+
+    window.addEventListener('scroll', (e) => {
+        if (window.pageYOffset >= window.innerHeight && !isMenuShown) {
+            let menu = document.querySelector('#header');
+            menu.classList.add('fixed');
+            isMenuShown = true;
+        } else if (window.pageYOffset < window.innerHeight && isMenuShown) {
+            let menu = document.querySelector('#header');
+            menu.classList.remove('fixed');
+            isMenuShown = false;
+        }
     })
+
 })
